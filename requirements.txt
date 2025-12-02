@@ -1,0 +1,106 @@
+# Privacy-Preserving Secure Aggregation Platform
+# Requirements file for production deployment
+
+# ==========================================
+# CORE DEPENDENCIES (Required)
+# ==========================================
+
+# Web Framework
+streamlit>=1.28.0
+
+# Data Manipulation & Analysis
+pandas>=1.3.0
+numpy>=1.20.0
+
+# Visualization
+matplotlib>=3.4.0
+altair>=5.0.0
+
+# Cryptography & Security
+cryptography>=3.4.0
+
+# Utilities
+python-dateutil>=2.8.0
+
+# ==========================================
+# OPTIONAL DEPENDENCIES (Recommended)
+# ==========================================
+
+# Homomorphic Encryption (TenSEAL - enables HE aggregation)
+# Uncomment to install: pip install tenseal
+# tenseal>=0.3.0
+
+# Interactive Maps (Folium visualization)
+# Uncomment to install: pip install folium streamlit-folium
+# folium>=0.12.0
+# streamlit-folium>=0.6.0
+
+# ==========================================
+# DEVELOPMENT DEPENDENCIES (Testing & QA)
+# ==========================================
+
+# Testing Framework
+pytest>=6.2.0
+pytest-cov>=2.12.0
+pytest-mock>=3.6.0
+
+# Code Quality
+black>=21.0
+flake8>=3.9.0
+mypy>=0.910
+pylint>=2.9.0
+
+# Performance Analysis
+memory-profiler>=0.58.0
+line-profiler>=3.3.0
+
+# Documentation
+sphinx>=4.0.0
+sphinx-rtd-theme>=1.0.0
+
+# ==========================================
+# PRODUCTION DEPLOYMENT
+# ==========================================
+
+# For Docker containerization
+# gunicorn>=20.1.0
+# psutil>=5.8.0
+
+# For AWS Lambda
+# awslambdaric>=2.0.0
+# aws-xray-sdk>=2.10.0
+
+# ==========================================
+# INSTALLATION INSTRUCTIONS
+# ==========================================
+#
+# 1. Basic Installation (Core Only):
+#    pip install -r requirements.txt
+#
+# 2. With HE Support (TenSEAL):
+#    pip install -r requirements.txt tenseal
+#
+# 3. With All Optional Features:
+#    pip install -r requirements.txt tenseal folium streamlit-folium
+#
+# 4. Development Setup (includes testing tools):
+#    pip install -r requirements.txt -r requirements-dev.txt
+#
+# 5. Verify Installation:
+#    python -m py_compile gant.py
+#    streamlit run gant.py
+#
+# ==========================================
+# NOTES
+# ==========================================
+#
+# - TenSEAL installation may fail on some platforms
+#   The application gracefully degrades if TenSEAL is unavailable
+#
+# - Folium/streamlit-folium are optional
+#   Basic analytics work without map support
+#
+# - For development, use Python 3.8+ and virtual environment
+#
+# - Recommended: Python 3.10+ for best performance
+#
